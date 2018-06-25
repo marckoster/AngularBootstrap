@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
+import {AngularFireDatabase} from "angularfire2/database";
 
 @Component({
   selector: 'app-product',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+
+  id: any;
+  idea:any;
+
+  constructor(private router: Router, private route: ActivatedRoute, private db: AngularFireDatabase) {
+
+  }
 
   ngOnInit() {
+    this.route.params.subscribe((params) => {
+      this.idea = this.db.object('/ideas/' +params['id']);
+      console.log(this.idea);
+    });
   }
 
 }
