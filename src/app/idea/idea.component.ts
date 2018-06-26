@@ -3,10 +3,10 @@ import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-product',
-  templateUrl: './product.component.html',
+  templateUrl: './idea.component.html',
   styleUrls: ['./product.component.sass']
 })
-export class ProductComponent implements OnInit {
+export class IdeaComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute) {
 
