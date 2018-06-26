@@ -12,13 +12,15 @@ import {environment} from "../environments/environment";
 import {HttpModule} from "@angular/http";
 import {HttpClientModule} from "@angular/common/http";
 import { AngularFireDatabaseModule} from "angularfire2/database";
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     DashboardComponent,
-    ProductComponent
+    ProductComponent,
+    LoginComponent
   ],
   imports: [
     AppRoutingModule,
