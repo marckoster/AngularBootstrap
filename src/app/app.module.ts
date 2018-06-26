@@ -22,11 +22,8 @@ import { AngularFireDatabaseModule} from "angularfire2/database";
   ],
   imports: [
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
     BrowserModule,
     HttpClientModule,
-    HttpModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot()
