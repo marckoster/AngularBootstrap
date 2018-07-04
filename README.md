@@ -41,3 +41,20 @@ json-server db.json --routes routes.json
 * Beim erstellen ( Entwurfsfunktion)
 * Bilder oder Media Dateien Hochladen 
 
+
+## Deploy to Git hub pages
+
+https://github.com/angular-schule/angular-cli-ghpages
+
+###Setuop
+
+npm i -g angular-cli-ghpages
+
+or sudo npm i -g angular-cli-ghpages
+
+ng build --prod --base-href "https://USERNAME.github.io/REPOSITORY_NAME/"
+
+sudo ngh --no-silent
+
+
+
