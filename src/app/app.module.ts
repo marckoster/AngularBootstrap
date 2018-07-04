@@ -13,6 +13,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {LoginComponent} from './login/login.component';
 import {CreateComponent} from './create/create.component';
 import { ChatComponent } from './detail/chat/chat.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ChatComponent } from './detail/chat/chat.component';
     AppRoutingModule,
     BrowserModule,
     HttpClientModule,
+    RouterModule,
     RatingModule.forRoot(),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),

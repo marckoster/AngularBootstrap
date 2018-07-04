@@ -1,47 +1,79 @@
 <div class="container">
-
-  <div class="card" style="margin-top: 60px; padding-bottom: 60px">
-    <h3>Idee Erstellen</h3>
-    <hr>
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Titel</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">Bitte geben Sie die Idee in wieder..</small>
-      </div>
-      <div class="form-group">
-        <label for="exampleFormControlTextarea1">Beschreibung</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" ></textarea>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="form-group">
-            <label for="sel1">Bereich auswählen:</label>
-            <select class="form-control" id="sel1">
-              <option>Walzwerk</option>
-              <option>Stahlwerk</option>
-              <option>Zentralkokerei</option>
-              <option>Hochofen</option>
-              <option>Hütte</option>
-              <option>IT</option>
-            </select>
+  <div class="card" style="padding-bottom: 60px">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-10">
+        <div class="row">
+          <div class="col-sm-8">
+            <h1>Idee erstellen</h1>
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-default pull-right btn-sm" (click)="showHilfe()"><i class="fa fa-question"></i> Hilfe</button>
           </div>
         </div>
-        <div class="col-sm-6">
-          <div class="form-group">
-            <label for="ver">Verantwortlichen wählen:</label>
-            <input type="email" class="form-control" id="ver" aria-describedby="emailHelp">
+        <hr>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Titel</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small *ngIf="hilfe" class="form-text text-muted">Geben Sie die in einem kurzen Satz wieder..</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Beschreibung</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>
+          <small *ngIf="hilfe"  class="form-text text-muted">Erklären Sie ihre Idee genauer..</small>
+
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="sel1">Bereich auswählen:</label>
+              <select class="form-control" id="sel1">
+                <option>Walzwerk</option>
+                <option>Stahlwerk</option>
+                <option>Zentralkokerei</option>
+                <option>Hochofen</option>
+                <option>Hütte</option>
+                <option>IT</option>
+              </select>
+              <small *ngIf="hilfe"  class="form-text text-muted">Für welchen bereich ist ihre Idee..</small>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="ver">Verantwortlichen wählen:</label>
+              <input type="email" class="form-control" id="ver" aria-describedby="emailHelp">
+              <small *ngIf="hilfe"  class="form-text text-muted">Name einer Verantwortlichen eintragen falls bekannt</small>
+            </div>
           </div>
         </div>
-      </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="sel1">Sichbarkeit auswählen:</label>
+              <select class="form-control" id="sel1">
+                <option>Öffentlich</option>
+                <option>Privat</option>
+                <option>Nur Gutachter</option>
+              </select>
+              <small *ngIf="hilfe"  class="form-text text-muted">Für wen soll Ihre Idee sichtbar sein?</small>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="ver">Dateien & Bilder hinzufügen:</label>
+              <div>
+                <button class="btn btn-default"><i class="fa fa-folder-open"></i> Auswählen</button>              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="pull-right">
-        <button type="submit" class="btn btn-primary">Idee speichern</button>
-        <button type="submit" class="btn btn-primary">Idee einreichen</button>
+        <div class="pull-right">
+          <button type="submit" class="btn btn-default"><i class="fa fa-save"></i> Entwurf speichern</button>
+          <button type="submit" class="btn btn-primary"><i class="fa fa-send"></i> Idee einreichen</button>
+        </div>
       </div>
-    </form>
-
+    </div>
   </div>
+
 
 </div>
