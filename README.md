@@ -31,3 +31,30 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 https://github.com/typicode/json-server
 
 json-server db.json --routes routes.json
+
+
+## Weitere Anforderungen anhand der Interviews
+
+* Dashboarsuche nach ideen 
+* Idee selber - status - letzte Änderung mit Datum ..
+* Beim erstellen eine Auswahl ( öffentlich , Abteilung , Privat - nur für Gutachter)
+* Beim erstellen ( Entwurfsfunktion)
+* Bilder oder Media Dateien Hochladen 
+
+
+## Deploy to Git hub pages
+
+https://github.com/angular-schule/angular-cli-ghpages
+
+###Setuop
+
+npm i -g angular-cli-ghpages
+
+or sudo npm i -g angular-cli-ghpages
+
+ng build --prod --base-href "https://USERNAME.github.io/REPOSITORY_NAME/"
+
+sudo ngh --no-silent
+
+
+
