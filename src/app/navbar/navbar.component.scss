@@ -1,0 +1,14 @@
+.navbar {
+	text-transform: uppercase;
+	height: 50px;
+}
+
+.navbar-link {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.navbar-dark .navbar-nav > li > a:hover, 
+.navbar-dark .navbar-nav > li > a:focus {
+	background-color: #4D90FE;
+}

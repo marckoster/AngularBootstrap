@@ -4,7 +4,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 @Component({
   selector: 'app-product',
   templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.sass']
+  styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
 
