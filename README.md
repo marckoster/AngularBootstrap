@@ -31,3 +31,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 https://github.com/typicode/json-server
 
 json-server db.json --routes routes.json
+
+
+##Weitere Anforderungen anhand der Interviews
+
+* Dashboarsuche nach ideen 
+* Idee selber - status - letzte Änderung mit Datum ..
+* Beim erstellen eine Auswahl ( öffentlich , Abteilung , Privat - nur für Gutachter)
+* Beim erstellen ( Entwurfsfunktion)
+* Bilder oder Media Dateien Hochladen 
+
