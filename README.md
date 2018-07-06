@@ -52,7 +52,7 @@ npm i -g angular-cli-ghpages
 
 or sudo npm i -g angular-cli-ghpages
 
-ng build --prod --base-href "https://USERNAME.github.io/REPOSITORY_NAME/"
+ng build --prod --base-href "https://marckoster.github.io/AngularBootstrap/MyProject/"
 
 sudo ngh --no-silent
 
