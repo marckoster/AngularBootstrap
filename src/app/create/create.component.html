@@ -4,7 +4,7 @@
       <div class="col-md-offset-1 col-md-10">
         <div class="row">
           <div class="col-sm-8">
-            <h1>Idee erstellen</h1>
+            <h1>Idee erfassen</h1>
           </div>
           <div class="col-sm-4">
             <button type="button" class="btn btn-default pull-right btn-sm" (click)="showHilfe()"><i class="fa fa-question"></i> Hilfe</button>
@@ -14,35 +14,45 @@
         <div class="form-group">
           <label for="exampleInputEmail1">Titel</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <small *ngIf="hilfe" class="form-text text-muted">Geben Sie die in einem kurzen Satz wieder..</small>
+          <small *ngIf="hilfe" class="form-text text-muted">Beschreiben sie ihre Idee in einem kurzen Satz</small>
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Beschreibung</label>
+          <label for="exampleFormControlTextarea1">Problemstellung</label>
           <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>
-          <small *ngIf="hilfe"  class="form-text text-muted">Erklären Sie ihre Idee genauer..</small>
+          <small *ngIf="hilfe" class="form-text text-muted">Erklären sie die aktuelle Problemsetllung</small>
+
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Lösungsvorschlag</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>
+          <small *ngIf="hilfe" class="form-text text-muted">Erläutern Sie ihren Lösungsvorschlag</small>
 
         </div>
 
         <div class="row">
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="sel1">Bereich auswählen:</label>
+              <label for="sel1">Bereich (Wirksamkeit) auswählen :</label>
               <select class="form-control" id="sel1">
+                <option>Hütteweit</option>
                 <option>Walzwerk</option>
                 <option>Stahlwerk</option>
                 <option>Zentralkokerei</option>
                 <option>Hochofen</option>
-                <option>Hütte</option>
-                <option>IT</option>
+                <option>Informatik</option>
               </select>
-              <small *ngIf="hilfe"  class="form-text text-muted">Für welchen bereich ist ihre Idee..</small>
+              <small *ngIf="hilfe" class="form-text text-muted">Wählen sie den Bereich in der ihre Idee umgesetzt werden kann</small>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
               <label for="ver">Verantwortlichen wählen:</label>
-              <input type="email" class="form-control" id="ver" aria-describedby="emailHelp">
-              <small *ngIf="hilfe"  class="form-text text-muted">Name einer Verantwortlichen eintragen falls bekannt</small>
+              <select class="form-control" id="sel1">
+                  <option>Max Mustermann</option>
+                  <option>Joe Doe</option>
+                  <option>Jane Roe</option>
+                </select>
+              <small *ngIf="hilfe" class="form-text text-muted">Benennen sie einen Verantwortlichen der ihre Idee begutachten soll</small>
             </div>
           </div>
         </div>
@@ -51,22 +61,40 @@
             <div class="form-group">
               <label for="sel1">Sichbarkeit auswählen:</label>
               <select class="form-control" id="sel1">
-                <option>Öffentlich</option>
-                <option>Privat</option>
-                <option>Nur Gutachter</option>
+                <option>Für Alle sichtbar</option>
+                <option>Für meinen Arbeitsbereich</option>
+                <option>Für den Gutachter</option>
               </select>
-              <small *ngIf="hilfe"  class="form-text text-muted">Für wen soll Ihre Idee sichtbar sein?</small>
+              <small *ngIf="hilfe" class="form-text text-muted">Wählen sie die Sichbarkeit ihrer Idee aus</small>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <div class="form-group">
               <label for="ver">Dateien & Bilder hinzufügen:</label>
               <div>
-                <button class="btn btn-default"><i class="fa fa-folder-open"></i> Auswählen</button>              </div>
+                <button class="btn btn-default"><i class="fa fa-folder-open"></i> Auswählen</button>
+              </div>
+              <small *ngIf="hilfe" class="form-text text-muted">Hier können sie optional Medien zu ihrer Idee hinzufügen (Bilder, Zeichnungen, PDFs, usw.)</small>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label >Miteinreicher:</label>
+              <select class="form-control" (change)="changeSelection($event)" >
+                <option>Nein</option>
+                <option>Ja</option>
+              </select>
             </div>
           </div>
         </div>
+        <div *ngIf="miteinreicher === 'Ja'">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Nachname, Vorname</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+        </div>
 
+        <hr>
         <div class="pull-right">
           <button type="submit" class="btn btn-default"><i class="fa fa-save"></i> Entwurf speichern</button>
           <button type="submit" class="btn btn-primary"><i class="fa fa-send"></i> Idee einreichen</button>

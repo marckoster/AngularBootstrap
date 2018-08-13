@@ -10,7 +10,7 @@
   padding: 16px;
   z-index: 1000;
   background-color: white;
-  margin-top: 10px;
+  margin-top: 10px;   
 }
 .card-container {
   padding: 2px 16px;
@@ -21,7 +21,7 @@ body {
 }
 
 .bg {
-  height: 100%;
+  height: calc(100% - 65px  );
   position: absolute;
   width: 100%;
   background-position:center;

@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>MyProject</title>
+  <title>DILLINGER - IDEEFIX</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,4 +11,43 @@
 <body>
   <app-root></app-root>
 </body>
+<script>
+  function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByClassName("section-box");
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName('h4')[0];
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+  function myFunction1() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput1");
+    filter = input.value.toUpperCase();
+
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByClassName("section-box");
+    if (filter.toUpperCase() === 'HÜTTEWEIT') {
+      for (i = 0; i < li.length; i++) {
+        li[i].style.display = "block";
+      }
+      return;
+    }
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByClassName('badge')[0];
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+</script>
 </html>

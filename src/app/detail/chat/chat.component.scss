@@ -1,7 +1,8 @@
 .chat {
   margin: 0;
   padding: 0;
-  list-style: none
+  list-style: none;
+  height: 100%;
 }
 
 .chat li {
@@ -28,7 +29,6 @@
 
 .panel-body {
   overflow-y: scroll;
-  height: 250px;
 }
 
 ::-webkit-scrollbar-track {
@@ -48,4 +48,5 @@
 .app-thumbnail {
   max-width: 50px;
   max-height: 50px;
+  border-radius: 50px;
 }
