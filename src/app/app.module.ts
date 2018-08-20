@@ -14,6 +14,7 @@ import {LoginComponent} from './login/login.component';
 import {CreateComponent} from './create/create.component';
 import { ChatComponent } from './detail/chat/chat.component';
 import {RouterModule} from "@angular/router";
+import {AdminComponent} from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {RouterModule} from "@angular/router";
     DetailComponent,
     LoginComponent,
     CreateComponent,
+    AdminComponent,
     ChatComponent,
 
   ],

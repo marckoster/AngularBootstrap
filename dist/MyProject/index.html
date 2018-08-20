@@ -6,8 +6,47 @@
   <base href="https://marckoster.github.io/AngularBootstrap/MyProject/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.e4b881148d2213cbfa25.css"></head>
+<link rel="stylesheet" href="styles.8429a462da192f347394.css"></head>
 <body>
   <app-root></app-root>
-<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.e3633a42d1123afc5fc9.js"></script><script type="text/javascript" src="main.69e920085daa55d3dcfb.js"></script></body>
+<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.e3633a42d1123afc5fc9.js"></script><script type="text/javascript" src="scripts.e2cc764d74d6cb8d1c42.js"></script><script type="text/javascript" src="main.12facdb063b3c744a72e.js"></script></body>
+<script>
+  function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByClassName("section-box");
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName('h4')[0];
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+  function myFunction1() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput1");
+    filter = input.value.toUpperCase();
+
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByClassName("section-box");
+    if (filter.toUpperCase() === 'HÜTTEWEIT') {
+      for (i = 0; i < li.length; i++) {
+        li[i].style.display = "block";
+      }
+      return;
+    }
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByClassName('badge')[0];
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+</script>
 </html>

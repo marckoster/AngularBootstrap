@@ -8,8 +8,16 @@ import {Component, OnInit} from '@angular/core';
 export class DashboardComponent implements OnInit {
 
 
+  adminBereich: boolean = false;
+
   constructor() {
 
+  }
+
+
+  bereichWechseln(){
+   this.adminBereich = ( this.adminBereich === false ) ? true : false;
+    console.log(this.adminBereich);
   }
 
   ngOnInit() {

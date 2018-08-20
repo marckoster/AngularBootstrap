@@ -5,7 +5,9 @@
     <div class="row " id="myUL">
 
 
+      <!-- TODO muss auch unten geaenmdert werden -->
       <div class="col-xs-12 visible-xs visible-sm">
+
         <input type="suche" class="form-control" id="myInput" aria-describedby="emailHelp"
                placeholder="nach Ideen suchen ..." onkeyup="myFunction()">
         <label for="sel1">Bereich auswählen :</label>
@@ -17,6 +19,9 @@
           <option>Hochofen</option>
           <option>Informatik</option>
         </select>
+        <hr>
+        <label for="admin">Adminbereich:</label>
+        <button class="btn btn-danger" (click)="bereichWechseln()">Ansicht wechseln</button>
         <div class="checkbox">
           <label><input type="checkbox" value="">Nur meine Ideen</label>
         </div>
@@ -49,6 +54,11 @@
               <span class="glyphicon glyphicon-comment"></span> (3 Kommentare) |
               <span class="glyphicon glyphicon-user"></span> (von: Marc Koster) |
               <span class="glyphicon glyphicon-arrow-right"></span> <a routerLink="/detail"> mehr..</a>
+            </div>
+            <div class="col-md-12" *ngIf="adminBereich">
+              <a class="btn btn-danger btn-sm pull-right" routerLink="/admin">
+                Idee bewerten..
+              </a>
             </div>
           </div>
           <hr style="border: 1px solid #101010; margin: 15px">
@@ -85,6 +95,10 @@
             </div>
 
           </div>
+          <div class="panel panel-success" *ngIf="adminBereich" style="margin-top: 5px">
+            <div class="panel-heading">Wird umgesetzt</div>
+            <div class="panel-body">Idee soll umgesetzt werden bis zum 15.09.19</div>
+          </div>
           <hr style="border: 1px solid #101010; margin: 15px">
 
         </div>
@@ -119,6 +133,10 @@
               <span class="glyphicon glyphicon-arrow-right"></span> <a routerLink="/detail"> mehr..</a>
             </div>
           </div>
+          <div class="panel panel-success" *ngIf="adminBereich" style="margin-top: 5px">
+            <div class="panel-heading">Wird umgesetzt</div>
+            <div class="panel-body">Idee soll umgesetzt werden bis zum 15.09.19</div>
+          </div>
         </div>
       </div>
 
@@ -134,6 +152,10 @@
           <option>Hochofen</option>
           <option>Informatik</option>
         </select>
+        <div>
+          <label for="admin">Adminbereich:</label>
+        </div>
+        <button class="btn btn-danger btn-block" (click)="bereichWechseln()">Ansicht wechseln</button>
         <div class="checkbox">
           <label><input type="checkbox" value="">Nur meine Ideen</label>
         </div>
